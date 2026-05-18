@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HotelOS — Operations Dashboard</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2e3248;
+      --accent: #4f6ef7;
+      --green: #22c55e;
+      --yellow: #f59e0b;
+      --red: #ef4444;
+      --orange: #f97316;
+      --purple: #a855f7;
+      --text: #e2e8f0;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 14px;
+      min-height: 100vh;
+    }
+
+    /* ── Login overlay ── */
+    #login-screen {
+      position: fixed; inset: 0;
+      background: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 100;
+    }
+    .login-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      width: 360px;
+      text-align: center;
+    }
+    .login-card h1 { font-size: 1.6rem; margin-bottom: 8px; }
+    .login-card p  { color: var(--muted); margin-bottom: 24px; }
+    .login-card input {
+      width: 100%; padding: 10px 14px;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 8px; color: var(--text);
+      font-size: 14px; margin-bottom: 12px;
+    }
+    .login-card button {
+      width: 100%; padding: 10px;
+      background: var(--accent); border: none; border-radius: 8px;
+      color: #fff; font-size: 14px; cursor: pointer; font-weight: 600;
+    }
+    #login-error { color: var(--red); font-size: 13px; margin-top: 8px; }
+
+    /* ── Header ── */
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    header h1 { font-size: 1.2rem; letter-spacing: .5px; }
+    #ws-status {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 12px; color: var(--muted);
+    }
+    #ws-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--red);
+      transition: background .3s;
+    }
+    #ws-dot.connected { background: var(--green); }
+
+    /* ── Main grid ── */
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 20px;
+      padding: 24px;
+    }
+
+    /* ── Panel ── */
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .panel-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 600; font-size: 13px; text-transform: uppercase;
+      letter-spacing: .8px; color: var(--muted);
+    }
+    .badge {
+      background: var(--accent);
+      color: #fff; font-size: 11px; font-weight: 700;
+      padding: 2px 8px; border-radius: 999px;
+    }
+
+    /* ── Room grid ── */
+    #rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      padding: 16px;
+    }
+    .room-card {
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 8px;
+      text-align: center; font-size: 12px;
+      transition: border-color .25s, background .25s;
+    }
+    .room-card .rnum { font-size: 15px; font-weight: 700; }
+    .room-card .rtype { color: var(--muted); margin: 2px 0 4px; font-size: 11px; }
+    .room-card .rstatus {
+      display: inline-block;
+      padding: 2px 6px; border-radius: 999px;
+      font-size: 11px; font-weight: 600;
+    }
+    .room-card .rguest { color: var(--muted); margin-top: 4px; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* Status colours */
+    .s-Clean       { background: #14532d; color: var(--green); }
+    .s-Dirty       { background: #422006; color: var(--orange); }
+    .s-Being-cleaned { background: #1e3a5f; color: #60a5fa; }
+    .s-Occupied    { background: #312e81; color: #a5b4fc; }
+    .s-Maintenance { background: #450a0a; color: var(--red); }
+
+    /* ── Event log ── */
+    #event-log {
+      height: 220px; overflow-y: auto;
+      padding: 12px 16px;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .log-item {
+      font-size: 12px; padding: 6px 10px;
+      border-left: 3px solid var(--accent);
+      background: rgba(79,110,247,.07);
+      border-radius: 0 6px 6px 0;
+      animation: fadein .3s ease;
+    }
+    .log-item .ts { color: var(--muted); font-size: 10px; }
+    @keyframes fadein { from { opacity: 0; transform: translateX(-6px); } }
+
+    /* ── Orders & Maintenance lists ── */
+    .item-list { padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; }
+    .item-card {
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 12px;
+    }
+    .item-card .row { display: flex; justify-content: space-between; align-items: center; }
+    .item-card .id  { font-size: 11px; color: var(--muted); }
+    .item-card .info { font-size: 13px; font-weight: 600; }
+    .item-card .sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .pill {
+      padding: 2px 8px; border-radius: 999px;
+      font-size: 11px; font-weight: 600;
+    }
+    .p-Received         { background:#1e3a5f; color:#60a5fa; }
+    .p-Preparing        { background:#422006; color:var(--orange); }
+    .p-Out-for-delivery { background:#312e81; color:#a5b4fc; }
+    .p-Delivered        { background:#14532d; color:var(--green); }
+    .p-Pending          { background:#422006; color:var(--orange); }
+    .p-In-Progress      { background:#312e81; color:#a5b4fc; }
+    .p-Resolved         { background:#14532d; color:var(--green); }
+    .p-Critical { background:#450a0a; color:var(--red); }
+    .p-High     { background:#422006; color:var(--orange); }
+    .p-Normal   { background:#14532d; color:var(--green); }
+    .p-Low      { background:#1e293b; color:var(--muted); }
+    .empty { color: var(--muted); font-size: 13px; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+
+<!-- Login -->
+<div id="login-screen">
+  <div class="login-card">
+    <h1>🏨 HotelOS</h1>
+    <p>Operations Dashboard — Staff Access Only</p>
+    <input type="password" id="token-input" placeholder="Enter access token" />
+    <button onclick="connectDashboard()">Connect</button>
+    <div id="login-error"></div>
+  </div>
+</div>
+
+<header>
+  <h1>🏨 HotelOS — Operations Dashboard</h1>
+  <div id="ws-status">
+    <div id="ws-dot"></div>
+    <span id="ws-label">Disconnected</span>
+  </div>
+</header>
+
+<main>
+  <!-- Rooms -->
+  <div class="panel" style="grid-column: 1 / -1">
+    <div class="panel-header">
+      <span>Rooms</span>
+      <span class="badge" id="rooms-badge">0</span>
+    </div>
+    <div id="rooms-grid"></div>
+  </div>
+
+  <!-- Active Orders -->
+  <div class="panel">
+    <div class="panel-header">
+      <span>Room Service Orders</span>
+      <span class="badge" id="orders-badge">0</span>
+    </div>
+    <div class="item-list" id="orders-list"><div class="empty">No active orders</div></div>
+  </div>
+
+  <!-- Maintenance -->
+  <div class="panel">
+    <div class="panel-header">
+      <span>Maintenance Issues</span>
+      <span class="badge" id="maint-badge">0</span>
+    </div>
+    <div class="item-list" id="maint-list"><div class="empty">No open issues</div></div>
+  </div>
+
+  <!-- Event log -->
+  <div class="panel" style="grid-column: 1 / -1">
+    <div class="panel-header"><span>Live Event Log</span></div>
+    <div id="event-log"></div>
+  </div>
+</main>
+
+<script>
+  // ── State ──
+  let ws = null;
+  let rooms = {};     // room_number → room dict
+  let orders = {};    // order_id → order dict
+  let maintenance = {};  // request_id → request dict
+
+  // ── Auth ──
+  function connectDashboard() {
+    const token = document.getElementById('token-input').value.trim();
+    if (!token) { showLoginError('Token required.'); return; }
+    initWebSocket(token);
+  }
+
+  document.getElementById('token-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') connectDashboard();
+  });
+
+  function showLoginError(msg) {
+    document.getElementById('login-error').textContent = msg;
+  }
+
+  // ── WebSocket ──
+  function initWebSocket(token) {
+    const proto = location.protocol === 'https:' ? 'wss' : 'ws';
+    const url = `${proto}://${location.hostname}:8000/ws?token=${encodeURIComponent(token)}`;
+    ws = new WebSocket(url);
+
+    ws.onopen = () => {
+      document.getElementById('ws-dot').classList.add('connected');
+      document.getElementById('ws-label').textContent = 'Live';
+      document.getElementById('login-screen').style.display = 'none';
+      logEvent({ type: 'system', message: 'Connected to HotelOS dashboard' });
+      // Heartbeat
+      setInterval(() => { if (ws.readyState === 1) ws.send('ping'); }, 20000);
+    };
+
+    ws.onclose = () => {
+      document.getElementById('ws-dot').classList.remove('connected');
+      document.getElementById('ws-label').textContent = 'Disconnected';
+    };
+
+    ws.onerror = () => { showLoginError('Connection failed. Check token or server.'); };
+
+    ws.onmessage = e => {
+      let msg;
+      try { msg = JSON.parse(e.data); } catch { return; }
+      handleMessage(msg);
+    };
+  }
+
+  // ── Message handler ──
+  function handleMessage(msg) {
+    if (msg.type === 'snapshot') {
+      (msg.rooms || []).forEach(r => { rooms[r.room_number] = r; });
+      (msg.orders || []).forEach(o => { orders[o.order_id] = o; });
+      (msg.maintenance || []).forEach(m => { maintenance[m.request_id] = m; });
+      renderAll();
+      return;
+    }
+
+    // Live events
+    if (msg.type === 'pong') return;
+
+    const ev = msg.event || msg.type || msg.channel || '';
+
+    if (ev === 'guest_checked_in' || ev === 'guest_checked_out' || ev === 'room_status_changed' || ev === 'room_vacated') {
+      if (msg.room_number) {
+        // Merge patch into rooms state
+        const existing = rooms[msg.room_number] || {};
+        rooms[msg.room_number] = { ...existing, ...roomPatch(msg) };
+        renderRooms();
+      }
+    }
+
+    if (ev === 'order_status_changed') {
+      if (msg.order_id) {
+        const existing = orders[msg.order_id] || {};
+        orders[msg.order_id] = { ...existing, ...msg };
+        renderOrders();
+      }
+    }
+
+    if (ev === 'maintenance_reported' || ev === 'maintenance_assigned' || ev === 'maintenance_resolved') {
+      if (msg.request_id) {
+        const existing = maintenance[msg.request_id] || {};
+        maintenance[msg.request_id] = { ...existing, ...msg };
+        renderMaintenance();
+      }
+    }
+
+    logEvent(msg);
+  }
+
+  function roomPatch(msg) {
+    const patch = {};
+    if (msg.status)      patch.status = msg.status;
+    if (msg.guest_name)  patch.guest_name = msg.guest_name;
+    if (msg.room_type)   patch.room_type = msg.room_type;
+    if (msg.floor)       patch.floor = msg.floor;
+    if (msg.event === 'guest_checked_out' || msg.event === 'room_vacated') {
+      patch.guest_name = null;
+      patch.status = patch.status || 'Dirty';
+    }
+    if (msg.event === 'room_status_changed' && msg.status === 'Clean') {
+      patch.guest_name = null;
+    }
+    return patch;
+  }
+
+  // ── Rendering ──
+  function renderAll() { renderRooms(); renderOrders(); renderMaintenance(); }
+
+  function renderRooms() {
+    const grid = document.getElementById('rooms-grid');
+    const sorted = Object.values(rooms).sort((a,b) => a.room_number - b.room_number);
+    document.getElementById('rooms-badge').textContent = sorted.length;
+    grid.innerHTML = sorted.map(r => {
+      const cls = 's-' + r.status.replace(/ /g, '-');
+      const guest = r.guest_name ? `<div class="rguest">👤 ${esc(r.guest_name)}</div>` : '';
+      return `<div class="room-card">
+        <div class="rnum">${r.room_number}</div>
+        <div class="rtype">Floor ${r.floor} · ${r.room_type}</div>
+        <span class="rstatus ${cls}">${r.status}</span>
+        ${guest}
+      </div>`;
+    }).join('');
+  }
+
+  function renderOrders() {
+    const list = document.getElementById('orders-list');
+    const items = Object.values(orders).sort((a,b) => b.created_at - a.created_at);
+    document.getElementById('orders-badge').textContent = items.length;
+    if (!items.length) { list.innerHTML = '<div class="empty">No active orders</div>'; return; }
+    list.innerHTML = items.map(o => {
+      const pill = 'p-' + o.status.replace(/ /g, '-');
+      const desc = (o.items || []).map(i => `${i.quantity}× ${i.name}`).join(', ');
+      return `<div class="item-card">
+        <div class="row">
+          <span class="info">Room ${o.room_number} — £${(o.total||0).toFixed(2)}</span>
+          <span class="pill ${pill}">${o.status}</span>
+        </div>
+        <div class="sub">${esc(desc)}</div>
+        <div class="id">${o.order_id}</div>
+      </div>`;
+    }).join('');
+  }
+
+  function renderMaintenance() {
+    const list = document.getElementById('maint-list');
+    const items = Object.values(maintenance).sort((a,b) => a.submitted_at - b.submitted_at);
+    document.getElementById('maint-badge').textContent = items.length;
+    if (!items.length) { list.innerHTML = '<div class="empty">No open issues</div>'; return; }
+    list.innerHTML = items.map(m => {
+      const upill = 'p-' + m.urgency;
+      const spill = 'p-' + m.status.replace(/ /g, '-');
+      return `<div class="item-card">
+        <div class="row">
+          <span class="info">Room ${m.room_number}</span>
+          <span class="pill ${upill}">${m.urgency}</span>
+        </div>
+        <div class="sub">${esc(m.description)}</div>
+        <div class="row" style="margin-top:4px">
+          <span class="id">${m.request_id}${m.assigned_to ? ' → ' + esc(m.assigned_to) : ''}</span>
+          <span class="pill ${spill}">${m.status}</span>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  function logEvent(msg) {
+    const log = document.getElementById('event-log');
+    const now = new Date().toLocaleTimeString();
+    const ev = msg.event || msg.type || msg.channel || 'event';
+    const detail = msg.room_number ? ` · Room ${msg.room_number}` : '';
+    const div = document.createElement('div');
+    div.className = 'log-item';
+    div.innerHTML = `<span class="ts">${now}</span>  ${esc(ev)}${esc(detail)}`;
+    log.prepend(div);
+    // Cap log at 50 entries
+    while (log.children.length > 50) log.removeChild(log.lastChild);
+  }
+
+  function esc(s) {
+    if (!s) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+</script>
+</body>
+</html>
