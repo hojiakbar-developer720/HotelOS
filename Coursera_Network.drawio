@@ -1,0 +1,190 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="-1AI3E8fMP9p7Ul-nwg_">
+    <mxGraphModel dx="2571" dy="1571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-1" parent="1" style="swimlane;startSize=30;fillColor=#fce4ec;strokeColor=#f06292;html=1;fontStyle=1;" value="Tashqi Zona: Public Zone" vertex="1">
+          <mxGeometry height="160" width="680" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-2" parent="9xLuI68FAD7UG_8Q6STM-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="Talabalar &amp;amp; Professorlar" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-3" parent="9xLuI68FAD7UG_8Q6STM-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="Web Application Firewall (WAF)" vertex="1">
+          <mxGeometry height="60" width="160" x="260" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-4" parent="9xLuI68FAD7UG_8Q6STM-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="&lt;b&gt;CDN&lt;/b&gt;&lt;br&gt;Videodarslarni tezlashtirish" vertex="1">
+          <mxGeometry height="60" width="160" x="480" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;html=1;fontStyle=1;" value="1-Xavfsizlik Devori&lt;br&gt;&lt;font size=&quot;1&quot;&gt;(Firewall)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="280" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-6" parent="1" style="swimlane;startSize=30;fillColor=#e8f4f8;strokeColor=#3498db;html=1;fontStyle=1;" value="Yarim-Himoyalangan Zona: DMZ" vertex="1">
+          <mxGeometry height="160" width="680" x="20" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-7" parent="9xLuI68FAD7UG_8Q6STM-6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="Coursera Web Servers" vertex="1">
+          <mxGeometry height="60" width="180" x="100" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-8" parent="9xLuI68FAD7UG_8Q6STM-6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="Xavfsiz API Gateway" vertex="1">
+          <mxGeometry height="60" width="180" x="400" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;html=1;fontStyle=1;" value="2-Xavfsizlik Devori&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Ichki Himoya&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="280" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-10" parent="1" style="swimlane;startSize=30;fillColor=#fff0e6;strokeColor=#ff9900;html=1;fontStyle=1;" value="Ichki Maxfiy Zona: Private Zone" vertex="1">
+          <mxGeometry height="180" width="680" x="20" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-11" parent="9xLuI68FAD7UG_8Q6STM-10" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="Talabalar va Sertifikatlar Bazasi" vertex="1">
+          <mxGeometry height="80" width="160" x="40" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-12" parent="9xLuI68FAD7UG_8Q6STM-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="To&#39;lovlarni Shifrlash Tizimi" vertex="1">
+          <mxGeometry height="60" width="160" x="260" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-13" parent="9xLuI68FAD7UG_8Q6STM-10" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="Videodarslar va Kurslar Ombori" vertex="1">
+          <mxGeometry height="80" width="160" x="480" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-14" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="9xLuI68FAD7UG_8Q6STM-3" value="HTTPS / TLS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-15" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="9xLuI68FAD7UG_8Q6STM-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-16" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="9xLuI68FAD7UG_8Q6STM-5" value="Xavfsiz Filtrlangan Trafik">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-17" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;" target="9xLuI68FAD7UG_8Q6STM-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-18" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.75;exitY=1;entryX=0.5;entryY=0;" target="9xLuI68FAD7UG_8Q6STM-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-19" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.25;entryY=0;" target="9xLuI68FAD7UG_8Q6STM-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-20" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.75;entryY=0;" target="9xLuI68FAD7UG_8Q6STM-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-21" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;" target="9xLuI68FAD7UG_8Q6STM-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-22" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="9xLuI68FAD7UG_8Q6STM-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-23" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.75;exitY=1;entryX=0.5;entryY=0;" target="9xLuI68FAD7UG_8Q6STM-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-72" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Students &amp; Professors" vertex="1">
+          <mxGeometry height="54" width="215" x="1326" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-73" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Web Application Firewall" vertex="1">
+          <mxGeometry height="54" width="238" x="1314" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-74" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Content Delivery Network" vertex="1">
+          <mxGeometry height="54" width="245" x="1180" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-75" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Primary Firewall" vertex="1">
+          <mxGeometry height="54" width="177" x="1475" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-76" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-72" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-73" value="HTTPS / TLS Connection">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-77" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-73" style="curved=1;startArrow=none;endArrow=block;exitX=0.27;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-74" value="Cache Requests">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1303" y="499" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-78" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-73" style="curved=1;startArrow=none;endArrow=block;exitX=0.73;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-75" value="Clean Traffic">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1564" y="499" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-79" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Primary Firewall" vertex="1">
+          <mxGeometry height="54" width="177" x="2498" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-80" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Coursera Web Servers" vertex="1">
+          <mxGeometry height="54" width="215" x="2350" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-81" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Secure API Gateway" vertex="1">
+          <mxGeometry height="54" width="202" x="2615" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-82" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Internal Firewall" vertex="1">
+          <mxGeometry height="54" width="179" x="2497" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-83" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-79" style="curved=1;startArrow=none;endArrow=block;exitX=0.12;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-80" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2458" y="189" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-84" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-79" style="curved=1;startArrow=none;endArrow=block;exitX=0.88;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-81" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2716" y="189" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-85" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-80" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.13;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-82" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2458" y="293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-86" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-81" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.88;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-82" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2716" y="293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-87" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Internal Firewall" vertex="1">
+          <mxGeometry height="54" width="179" x="2043" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-88" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Student &amp; Certificate Database" vertex="1">
+          <mxGeometry height="110" width="215" x="1740" y="1154" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-89" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Payment Processing System" vertex="1">
+          <mxGeometry height="54" width="256" x="2005" y="1182" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-90" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Course Content &amp; Video Storage" vertex="1">
+          <mxGeometry height="110" width="215" x="2311" y="1154" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-91" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-87" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.8;entryX=0.5;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-88" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1848" y="1129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-92" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-87" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-89" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-93" edge="1" parent="1" source="9xLuI68FAD7UG_8Q6STM-87" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.8;entryX=0.5;entryY=0;rounded=0;" target="9xLuI68FAD7UG_8Q6STM-90" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2418" y="1129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-94" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Private Zone Segment" vertex="1">
+          <mxGeometry height="30" width="150" x="2058" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="DMZ Segment" vertex="1">
+          <mxGeometry height="30" width="130" x="2521.5" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9xLuI68FAD7UG_8Q6STM-96" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Public Zone Segment" vertex="1">
+          <mxGeometry height="30" width="160" x="1353" y="250" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
