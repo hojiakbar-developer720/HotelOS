@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Страница-1" id="-1AI3E8fMP9p7Ul-nwg_">
-    <mxGraphModel dx="2357" dy="1440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1664" dy="1016" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -183,6 +183,45 @@
         </mxCell>
         <mxCell id="9xLuI68FAD7UG_8Q6STM-96" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Public Zone Segment" vertex="1">
           <mxGeometry height="30" width="160" x="1033" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="l4r-q3AcZWamiGrXGcQE-1" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#1abc9c;strokeColor=#16a085;fontColor=#fff;" value="1. PREPARATION&#xa;&lt;sub&gt;- IR Plan &amp;amp; Playbooks&#xa;- Offline Backups&#xa;- Tabletop Exercises&lt;/sub&gt;" vertex="1">
+          <mxGeometry height="136" width="186" x="429" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="l4r-q3AcZWamiGrXGcQE-2" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#3498db;strokeColor=#2980b9;fontColor=#fff;" value="2. DETECTION &amp;amp; ANALYSIS&#xa;&lt;sub&gt;- SIEM Alerts Triaging&#xa;- Traffic Anomaly Analysis&#xa;- Incident Classification&lt;/sub&gt;" vertex="1">
+          <mxGeometry height="136" width="244" x="318" y="1086" as="geometry" />
+        </mxCell>
+        <mxCell id="l4r-q3AcZWamiGrXGcQE-3" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#e67e22;strokeColor=#d35400;fontColor=#fff;" value="3. CONTAINMENT, ERADICATION &amp;amp; RECOVERY&#xa;&lt;sub&gt;- Account Rate-Limiting&#xa;- Vulnerability Patching&#xa;- Clean Backup Restore&lt;/sub&gt;" vertex="1">
+          <mxGeometry height="160" width="260" x="310" y="1271" as="geometry" />
+        </mxCell>
+        <mxCell id="l4r-q3AcZWamiGrXGcQE-4" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#9b59b6;strokeColor=#8e44ad;fontColor=#fff;" value="4. POST-INCIDENT ACTIVITY&#xa;&lt;sub&gt;- Root Cause Review&#xa;- Regulatory Notifications&#xa;- Lessons Learned Feedback&lt;/sub&gt;" vertex="1">
+          <mxGeometry height="136" width="255" x="395" y="1481" as="geometry" />
+        </mxCell>
+        <mxCell id="l4r-q3AcZWamiGrXGcQE-5" edge="1" parent="1" source="l4r-q3AcZWamiGrXGcQE-1" style="curved=1;startArrow=none;endArrow=block;strokeColor=#bdc3c7;strokeWidth=2;;exitX=0.18;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="l4r-q3AcZWamiGrXGcQE-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1061" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l4r-q3AcZWamiGrXGcQE-6" edge="1" parent="1" source="l4r-q3AcZWamiGrXGcQE-2" style="curved=1;startArrow=none;endArrow=block;strokeColor=#bdc3c7;strokeWidth=2;;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" target="l4r-q3AcZWamiGrXGcQE-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l4r-q3AcZWamiGrXGcQE-7" edge="1" parent="1" source="l4r-q3AcZWamiGrXGcQE-3" style="curved=1;startArrow=none;endArrow=block;strokeColor=#bdc3c7;strokeWidth=2;;exitX=0.5;exitY=1;entryX=0.26;entryY=0;rounded=0;" target="l4r-q3AcZWamiGrXGcQE-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1456" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l4r-q3AcZWamiGrXGcQE-8" edge="1" parent="1" source="l4r-q3AcZWamiGrXGcQE-4" style="curved=1;startArrow=none;endArrow=block;strokeColor=#bdc3c7;strokeWidth=2;;exitX=0.74;exitY=0;entryX=0.83;entryY=1;rounded=0;" target="l4r-q3AcZWamiGrXGcQE-1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="605" y="1456" />
+              <mxPoint x="605" y="1061" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
