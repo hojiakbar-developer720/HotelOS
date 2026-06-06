@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Страница-1" id="MdNvbF1nq6O3z6V4URYc">
-    <mxGraphModel dx="3655" dy="1728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4225" dy="1571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -47,7 +47,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-15" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=36.8;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="StaffMember" vertex="1">
-          <mxGeometry height="192.8" width="225" x="-70" y="1050" as="geometry" />
+          <mxGeometry height="192.8" width="225" x="-1060" y="560" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-16" parent="iNHCCCuA8d9qGQun_-yG-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+str staff_id" vertex="1">
           <mxGeometry height="37" width="225" y="36.8" as="geometry" />
@@ -65,7 +65,7 @@
           <mxGeometry height="37" width="225" y="155.8" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-21" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Receptionist" vertex="1">
-          <mxGeometry height="168" width="224" x="205" y="1062" as="geometry" />
+          <mxGeometry height="168" width="224" x="-785" y="572" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-22" parent="iNHCCCuA8d9qGQun_-yG-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+int desk_number" vertex="1">
           <mxGeometry height="40" width="224" y="40" as="geometry" />
@@ -80,7 +80,7 @@
           <mxGeometry height="40" width="224" y="128" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-26" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Housekeeper" vertex="1">
-          <mxGeometry height="168" width="226" x="478" y="1062" as="geometry" />
+          <mxGeometry height="168" width="226" x="-512" y="572" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-27" parent="iNHCCCuA8d9qGQun_-yG-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+int assigned_floor" vertex="1">
           <mxGeometry height="40" width="226" y="40" as="geometry" />
@@ -95,7 +95,7 @@
           <mxGeometry height="40" width="226" y="128" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-31" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Technician" vertex="1">
-          <mxGeometry height="168" width="217" x="754" y="1062" as="geometry" />
+          <mxGeometry height="168" width="217" x="-236" y="572" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-32" parent="iNHCCCuA8d9qGQun_-yG-31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+str specialization" vertex="1">
           <mxGeometry height="40" width="217" y="40" as="geometry" />
@@ -110,25 +110,25 @@
           <mxGeometry height="40" width="217" y="128" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-36" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=default;spacing=9;strokeColor=#1071e5;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#cfe4ff;strokeWidth=3;lucidId=w--3~IzfWPSS;" value="Event-Driven Architecture: Redis Pub/Sub Workflow" vertex="1">
-          <mxGeometry height="123" width="163" x="930.5" y="37" as="geometry" />
+          <mxGeometry height="123" width="163" x="570" y="13" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-37" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=default;spacing=9;strokeColor=#1071e5;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#cfe4ff;strokeWidth=3;lucidId=w--3PIOkGoiq;" value="Reception Service (Event Publisher)" vertex="1">
-          <mxGeometry height="109" width="144" x="940" y="254" as="geometry" />
+          <mxGeometry height="109" width="144" x="579.5" y="230" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-38" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;rhombus;fontSize=13;spacing=3.8;strokeColor=#d916a8;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#ff80df;strokeWidth=3;lucidId=w--3V.72-.iJ;" value="&lt;div style=&quot;display: flex; justify-content: center; text-align: center; align-items: baseline; font-size: 0; line-height: 1.25;margin-top: -2px;&quot;&gt;&lt;span&gt;&lt;span style=&quot;font-size:16.7px;color:#000000;&quot;&gt;REDIS MESSAGE BROKER&#xa;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;display: flex; justify-content: center; text-align: center; align-items: baseline; font-size: 0; line-height: 1.25;margin-top: -2px;&quot;&gt;&lt;span&gt;&lt;span style=&quot;font-size:16.7px;color:#000000;&quot;&gt;Channel: hotel.room.events&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="230" width="307" x="1143" y="193" as="geometry" />
+          <mxGeometry height="230" width="307" x="782.5" y="169" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-39" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=default;spacing=9;strokeColor=#1071e5;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#cfe4ff;strokeWidth=3;lucidId=w--3AOEVpCi5;" value="Housekeeping Service (Subscriber)" vertex="1">
-          <mxGeometry height="108" width="143" x="1605" y="255" as="geometry" />
+          <mxGeometry height="108" width="143" x="1244.5" y="231" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-40" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=default;spacing=9;strokeColor=#1071e5;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#cfe4ff;strokeWidth=3;lucidId=w--3oy5jYj-5;" value="Maintenance Service (Subscriber)" vertex="1">
-          <mxGeometry height="99" width="132" x="1473" y="485" as="geometry" />
+          <mxGeometry height="99" width="132" x="1112.5" y="461" as="geometry" />
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-41" edge="1" parent="1" style="html=1;jettySize=18;whiteSpace=wrap;fontSize=13;strokeColor=#3a414a;strokeOpacity=100;strokeWidth=3;rounded=1;arcSize=12;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;startArrow=none;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;lucidId=w--37Xap023S;" value="">
           <mxGeometry height="100" relative="1" width="100" as="geometry">
             <Array as="points" />
-            <mxPoint x="986" y="307.58000000000044" as="sourcePoint" />
-            <mxPoint x="1146" y="308.08" as="targetPoint" />
+            <mxPoint x="625.5" y="283.58000000000044" as="sourcePoint" />
+            <mxPoint x="785.5" y="284.08" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="iNHCCCuA8d9qGQun_-yG-42" parent="iNHCCCuA8d9qGQun_-yG-41" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=1;fontColor=#3a414a;fontSize=13.3;" value="Publish Event: &#39;hotel.room.vacated&#39;" vertex="1">
