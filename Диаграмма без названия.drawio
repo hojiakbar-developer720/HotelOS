@@ -1,0 +1,182 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="MdNvbF1nq6O3z6V4URYc">
+    <mxGraphModel dx="3655" dy="1728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#37474f;" value="Procedural Flow: Billing Calculation Process" vertex="1">
+          <mxGeometry height="40" width="360" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#81c784;fontColor=#2e7d32;fontStyle=1;" value="START" vertex="1">
+          <mxGeometry height="60" width="60" x="170" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-3" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff9e6;strokeColor=#ffe082;fontColor=#b78103;" value="&lt;b&gt;Input Data&lt;/b&gt;&lt;br&gt;nights_stayed, room_rate,&lt;br&gt;room_service_charges" vertex="1">
+          <mxGeometry height="60" width="220" x="90" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#90caf9;fontColor=#0d47a1;" value="&lt;b&gt;Calculate Base Accommodation&lt;/b&gt;&lt;br&gt;base_total = nights_stayed * room_rate" vertex="1">
+          <mxGeometry height="60" width="260" x="70" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#90caf9;fontColor=#0d47a1;" value="&lt;b&gt;Aggregate Charges&lt;/b&gt;&lt;br&gt;sub_total = base_total + room_service_charges" vertex="1">
+          <mxGeometry height="60" width="260" x="70" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#90caf9;fontColor=#0d47a1;" value="&lt;b&gt;Apply 12% Hotel Tax&lt;/b&gt;&lt;br&gt;grand_total = sub_total * 1.12" vertex="1">
+          <mxGeometry height="60" width="260" x="70" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-7" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff9e6;strokeColor=#ffe082;fontColor=#b78103;" value="&lt;b&gt;Output / Display&lt;/b&gt;&lt;br&gt;Final Invoice Breakdown" vertex="1">
+          <mxGeometry height="60" width="220" x="90" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#f48fb1;fontColor=#c2185b;fontStyle=1;" value="END" vertex="1">
+          <mxGeometry height="60" width="60" x="170" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-9" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#546e7a;strokeWidth=2;" target="iNHCCCuA8d9qGQun_-yG-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-10" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#546e7a;strokeWidth=2;" target="iNHCCCuA8d9qGQun_-yG-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-11" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#546e7a;strokeWidth=2;" target="iNHCCCuA8d9qGQun_-yG-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-12" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#546e7a;strokeWidth=2;" target="iNHCCCuA8d9qGQun_-yG-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-13" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#546e7a;strokeWidth=2;" target="iNHCCCuA8d9qGQun_-yG-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-14" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#546e7a;strokeWidth=2;" target="iNHCCCuA8d9qGQun_-yG-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-15" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=36.8;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="StaffMember" vertex="1">
+          <mxGeometry height="192.8" width="225" x="-70" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-16" parent="iNHCCCuA8d9qGQun_-yG-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+str staff_id" vertex="1">
+          <mxGeometry height="37" width="225" y="36.8" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-17" parent="iNHCCCuA8d9qGQun_-yG-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+str name" vertex="1">
+          <mxGeometry height="37" width="225" y="73.8" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-18" parent="iNHCCCuA8d9qGQun_-yG-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+str role" vertex="1">
+          <mxGeometry height="37" width="225" y="110.8" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-19" parent="iNHCCCuA8d9qGQun_-yG-15" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="225" y="147.8" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-20" parent="iNHCCCuA8d9qGQun_-yG-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+void perform_duty()" vertex="1">
+          <mxGeometry height="37" width="225" y="155.8" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-21" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Receptionist" vertex="1">
+          <mxGeometry height="168" width="224" x="205" y="1062" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-22" parent="iNHCCCuA8d9qGQun_-yG-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+int desk_number" vertex="1">
+          <mxGeometry height="40" width="224" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-23" parent="iNHCCCuA8d9qGQun_-yG-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="&amp;lt;&amp;gt; StaffMember" vertex="1">
+          <mxGeometry height="40" width="224" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-24" parent="iNHCCCuA8d9qGQun_-yG-21" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="224" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-25" parent="iNHCCCuA8d9qGQun_-yG-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+void perform_duty()" vertex="1">
+          <mxGeometry height="40" width="224" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-26" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Housekeeper" vertex="1">
+          <mxGeometry height="168" width="226" x="478" y="1062" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-27" parent="iNHCCCuA8d9qGQun_-yG-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+int assigned_floor" vertex="1">
+          <mxGeometry height="40" width="226" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-28" parent="iNHCCCuA8d9qGQun_-yG-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="&amp;lt;&amp;gt; StaffMember" vertex="1">
+          <mxGeometry height="40" width="226" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-29" parent="iNHCCCuA8d9qGQun_-yG-26" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="226" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-30" parent="iNHCCCuA8d9qGQun_-yG-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+void perform_duty()" vertex="1">
+          <mxGeometry height="40" width="226" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-31" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Technician" vertex="1">
+          <mxGeometry height="168" width="217" x="754" y="1062" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-32" parent="iNHCCCuA8d9qGQun_-yG-31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+str specialization" vertex="1">
+          <mxGeometry height="40" width="217" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-33" parent="iNHCCCuA8d9qGQun_-yG-31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="&amp;lt;&amp;gt; StaffMember" vertex="1">
+          <mxGeometry height="40" width="217" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-34" parent="iNHCCCuA8d9qGQun_-yG-31" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="217" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-35" parent="iNHCCCuA8d9qGQun_-yG-31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+void perform_duty()" vertex="1">
+          <mxGeometry height="40" width="217" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-36" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=default;spacing=9;strokeColor=#1071e5;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#cfe4ff;strokeWidth=3;lucidId=w--3~IzfWPSS;" value="Event-Driven Architecture: Redis Pub/Sub Workflow" vertex="1">
+          <mxGeometry height="123" width="163" x="930.5" y="37" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-37" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=default;spacing=9;strokeColor=#1071e5;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#cfe4ff;strokeWidth=3;lucidId=w--3PIOkGoiq;" value="Reception Service (Event Publisher)" vertex="1">
+          <mxGeometry height="109" width="144" x="940" y="254" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-38" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;rhombus;fontSize=13;spacing=3.8;strokeColor=#d916a8;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#ff80df;strokeWidth=3;lucidId=w--3V.72-.iJ;" value="&lt;div style=&quot;display: flex; justify-content: center; text-align: center; align-items: baseline; font-size: 0; line-height: 1.25;margin-top: -2px;&quot;&gt;&lt;span&gt;&lt;span style=&quot;font-size:16.7px;color:#000000;&quot;&gt;REDIS MESSAGE BROKER&#xa;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;display: flex; justify-content: center; text-align: center; align-items: baseline; font-size: 0; line-height: 1.25;margin-top: -2px;&quot;&gt;&lt;span&gt;&lt;span style=&quot;font-size:16.7px;color:#000000;&quot;&gt;Channel: hotel.room.events&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="230" width="307" x="1143" y="193" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-39" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=default;spacing=9;strokeColor=#1071e5;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#cfe4ff;strokeWidth=3;lucidId=w--3AOEVpCi5;" value="Housekeeping Service (Subscriber)" vertex="1">
+          <mxGeometry height="108" width="143" x="1605" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-40" parent="1" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=default;spacing=9;strokeColor=#1071e5;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#cfe4ff;strokeWidth=3;lucidId=w--3oy5jYj-5;" value="Maintenance Service (Subscriber)" vertex="1">
+          <mxGeometry height="99" width="132" x="1473" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-41" edge="1" parent="1" style="html=1;jettySize=18;whiteSpace=wrap;fontSize=13;strokeColor=#3a414a;strokeOpacity=100;strokeWidth=3;rounded=1;arcSize=12;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;startArrow=none;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;lucidId=w--37Xap023S;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <Array as="points" />
+            <mxPoint x="986" y="307.58000000000044" as="sourcePoint" />
+            <mxPoint x="1146" y="308.08" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-42" parent="iNHCCCuA8d9qGQun_-yG-41" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=1;fontColor=#3a414a;fontSize=13.3;" value="Publish Event: &#39;hotel.room.vacated&#39;" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4" y="115" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-43" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-38" style="html=1;jettySize=18;whiteSpace=wrap;fontSize=13;strokeColor=#3a414a;strokeOpacity=100;strokeWidth=3;rounded=1;arcSize=12;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;startArrow=none;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;lucidId=w--3vC1r-9PY;" target="iNHCCCuA8d9qGQun_-yG-39" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-44" parent="iNHCCCuA8d9qGQun_-yG-43" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=1;fontColor=#3a414a;fontSize=13.3;" value="Trigger Clean Task" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-45" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-38" style="html=1;jettySize=18;whiteSpace=wrap;fontSize=13;strokeColor=#3a414a;strokeOpacity=100;strokeWidth=3;rounded=1;arcSize=12;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;startArrow=none;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;lucidId=w--3UfuEgyyI;" target="iNHCCCuA8d9qGQun_-yG-40" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-46" parent="iNHCCCuA8d9qGQun_-yG-45" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=1;fontColor=#3a414a;fontSize=13.3;" value="Log Room Analytics" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; white-space: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20parent%3D%221%22%20style%3D%22text%3Bhtml%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3BfontSize%3D16%3B%22%20value%3D%22%26lt%3Bb%26gt%3BReal-Time%20UI%20Layer%3A%20WebSocket%20State%20Synchronization%26lt%3B%2Fb%26gt%3B%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%2240%22%20width%3D%22500%22%20x%3D%22110%22%20y%3D%2220%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20parent%3D%221%22%20style%3D%22shape%3Dcube%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BboundedLbl%3D1%3BbackgroundOutline%3D1%3BdarkOpacity%3D0.05%3BdarkOpacity2%3D0.1%3BfillColor%3D%23e1d5e7%3BstrokeColor%3D%239673a6%3Bhtml%3D1%3B%22%20value%3D%22%26lt%3Bb%26gt%3BFastAPI%20Backend%20App%26lt%3B%2Fb%26gt%3B%26lt%3Bbr%26gt%3B%5BEndpoint%3A%20%2Fws%2Falerts%5D%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%22100%22%20width%3D%22180%22%20x%3D%2220%22%20y%3D%22100%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20parent%3D%221%22%20style%3D%22swimlane%3BstartSize%3D30%3BfillColor%3D%23fff2cc%3BstrokeColor%3D%23d6b656%3Bhtml%3D1%3Balign%3Dcenter%3B%22%20value%3D%22Web%20Operations%20Dashboard%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%22140%22%20width%3D%22260%22%20x%3D%22440%22%20y%3D%2280%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%225%22%20parent%3D%224%22%20style%3D%22rounded%3D1%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23d5e8d4%3BstrokeColor%3D%2382b366%3Bhtml%3D1%3B%22%20value%3D%22%26lt%3Bb%26gt%3BRoom%20Card%20UI%20Component%26lt%3B%2Fb%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3Bcode%26gt%3B%5BRoom%20101%3A%20Clean%5D%26lt%3B%2Fcode%26gt%3B%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%2260%22%20width%3D%22200%22%20x%3D%2230%22%20y%3D%2250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%226%22%20edge%3D%221%22%20parent%3D%221%22%20source%3D%223%22%20style%3D%22edgeStyle%3DorthogonalEdgeStyle%3Brounded%3D1%3Bhtml%3D1%3BstartArrow%3Dclassic%3BendArrow%3Dclassic%3BstrokeWidth%3D2%3BstrokeColor%3D%236a00ff%3BlabelBackgroundColor%3Dnone%3B%22%20target%3D%225%22%20value%3D%22Persistent%20WebSocket%20Connection%26lt%3Bbr%26gt%3B(Full-Duplex%20TCP%20Channel)%22%3E%3CmxGeometry%20relative%3D%221%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%227%22%20parent%3D%221%22%20style%3D%22shape%3Dnote%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BbackgroundOutline%3D1%3BdarkOpacity%3D0.05%3BfillColor%3D%23f5f5f5%3BfontColor%3D%23333333%3BstrokeColor%3D%23666666%3Balign%3Dleft%3BspacingLeft%3D10%3Bhtml%3D1%3B%22%20value%3D%22%26lt%3Bb%26gt%3BOn%20Event%20Broadcast%20(%26amp%3Bapos%3Broom.status.clean%26amp%3Bapos%3B)%3A%26lt%3B%2Fb%26gt%3B%26lt%3Bbr%26gt%3BJavaScript%20event%20listener%20triggers%3A%20%26lt%3Bi%26gt%3BupdateRoomCardUI()%26lt%3B%2Fi%26gt%3B%26lt%3Bbr%26gt%3B%E2%80%A2%20Modifies%20the%20DOM%20and%20room%20box%20colors%20dynamically%20without%20a%20full%20web%20page%20reload.%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%22100%22%20width%3D%22440%22%20x%3D%22140%22%20y%3D%22260%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%228%22%20edge%3D%221%22%20parent%3D%221%22%20source%3D%225%22%20style%3D%22edgeStyle%3DorthogonalEdgeStyle%3Brounded%3D1%3Bhtml%3D1%3Bdashed%3D1%3BendArrow%3Dnone%3BstrokeColor%3D%23666666%3B%22%20target%3D%227%22%3E%3CmxGeometry%20relative%3D%221%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-700" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-48" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="&lt;b&gt;Real-Time UI Layer: WebSocket State Synchronization&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="500" x="-680" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-49" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#e1d5e7;strokeColor=#9673a6;html=1;" value="&lt;b&gt;FastAPI Backend App&lt;/b&gt;&lt;br&gt;[Endpoint: /ws/alerts]" vertex="1">
+          <mxGeometry height="100" width="180" x="-770" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-50" parent="1" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;html=1;align=center;" value="Web Operations Dashboard" vertex="1">
+          <mxGeometry height="140" width="260" x="-350" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-51" parent="iNHCCCuA8d9qGQun_-yG-50" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;html=1;" value="&lt;b&gt;Room Card UI Component&lt;/b&gt;&lt;br&gt;&lt;code&gt;[Room 101: Clean]&lt;/code&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-52" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-49" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;startArrow=classic;endArrow=classic;strokeWidth=2;strokeColor=#6a00ff;labelBackgroundColor=none;" target="iNHCCCuA8d9qGQun_-yG-51" value="Persistent WebSocket Connection&lt;br&gt;(Full-Duplex TCP Channel)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-53" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;align=left;spacingLeft=10;html=1;" value="&lt;b&gt;On Event Broadcast (&amp;apos;room.status.clean&amp;apos;):&lt;/b&gt;&lt;br&gt;JavaScript event listener triggers: &lt;i&gt;updateRoomCardUI()&lt;/i&gt;&lt;br&gt;• Modifies the DOM and room box colors dynamically without a full web page reload." vertex="1">
+          <mxGeometry height="100" width="440" x="-650" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="iNHCCCuA8d9qGQun_-yG-54" edge="1" parent="1" source="iNHCCCuA8d9qGQun_-yG-51" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=none;strokeColor=#666666;" target="iNHCCCuA8d9qGQun_-yG-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
