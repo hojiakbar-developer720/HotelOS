@@ -1,0 +1,220 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="ApfKog2f0s-vZToha9a1">
+    <mxGraphModel dx="3655" dy="1728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sMe0qJWn2xNS24prNS6G-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" value="Cloud Infrastructure: Secure AWS VPC Architecture Model" vertex="1">
+          <mxGeometry height="40" width="740" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-2" parent="1" style="swimlane;whiteSpace=wrap;html=1;fontStyle=1;align=left;spacingLeft=10;fillColor=#F5F5F5;strokeColor=#666666;startSize=30;" value="AWS Region / Custom VPC (10.0.0.0/16)" vertex="1">
+          <mxGeometry height="520" width="740" x="20" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-3" parent="sMe0qJWn2xNS24prNS6G-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;html=1;" value="Internet Gateway&lt;br&gt;(IGW)" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-4" parent="sMe0qJWn2xNS24prNS6G-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;html=1;" value="Virtual Private&lt;br&gt;Gateway (VPN)" vertex="1">
+          <mxGeometry height="60" width="120" x="580" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-5" parent="sMe0qJWn2xNS24prNS6G-2" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;startSize=26;html=1;" value="Public Subnet (10.0.1.0/24) - External Facing" vertex="1">
+          <mxGeometry height="150" width="660" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-6" parent="sMe0qJWn2xNS24prNS6G-5" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFE6CC;strokeColor=#D79B00;" value="Application&lt;br&gt;Load Balancer" vertex="1">
+          <mxGeometry height="60" width="140" x="100" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-7" parent="sMe0qJWn2xNS24prNS6G-5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;html=1;" value="NAT Gateway" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-8" parent="sMe0qJWn2xNS24prNS6G-2" style="swimlane;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;startSize=26;html=1;" value="Private Subnet (10.0.2.0/24) - Internal Isolated" vertex="1">
+          <mxGeometry height="170" width="660" x="40" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-9" parent="sMe0qJWn2xNS24prNS6G-8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;html=1;" value="App Server 01&lt;br&gt;(EC2)" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-10" parent="sMe0qJWn2xNS24prNS6G-8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;html=1;" value="App Server 02&lt;br&gt;(EC2)" vertex="1">
+          <mxGeometry height="60" width="120" x="200" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-11" parent="sMe0qJWn2xNS24prNS6G-8" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Primary DB&lt;br&gt;(RDS PostgreSQL)" vertex="1">
+          <mxGeometry height="80" width="120" x="460" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-12" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="sMe0qJWn2xNS24prNS6G-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-13" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="sMe0qJWn2xNS24prNS6G-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-14" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="sMe0qJWn2xNS24prNS6G-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-15" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="sMe0qJWn2xNS24prNS6G-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-16" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="sMe0qJWn2xNS24prNS6G-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-17" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;html=1;" target="sMe0qJWn2xNS24prNS6G-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-18" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;html=1;" target="sMe0qJWn2xNS24prNS6G-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-19" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="&lt;b&gt;Data Lifecycle: End-to-End Network Traffic Routing Flow&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="860" x="-100" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-20" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;align=center;" value="&lt;b&gt;End User&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;(Web Browser)&lt;/font;" vertex="1">
+          <mxGeometry height="80" width="120" x="-100" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-21" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;align=center;" value="&lt;b&gt;DNS Server&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;(Route 53)&lt;/font;" vertex="1">
+          <mxGeometry height="80" width="120" x="80" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;align=center;" value="&lt;b&gt;Internet Gateway&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;(IGW)&lt;/font;" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;align=center;" value="&lt;b&gt;Load Balancer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;(ALB)&lt;/font;" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;align=center;" value="&lt;b&gt;Application Server&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;(Private EC2 Instance)&lt;/font;" vertex="1">
+          <mxGeometry height="60" width="140" x="620" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-25" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E1D5E7;strokeColor=#B85450;align=center;" value="&lt;b&gt;Database Layer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;(RDS Instance)&lt;/font;" vertex="1">
+          <mxGeometry height="80" width="120" x="630" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-26" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;exitX=1;exitY=0.33;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.33;entryDx=0;entryDy=0;entryPerimeter=0;" target="sMe0qJWn2xNS24prNS6G-21" value="1. Resolve IP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-27" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sMe0qJWn2xNS24prNS6G-22" value="2. Hit Gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-28" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="sMe0qJWn2xNS24prNS6G-23" value="3. Forward Traffic">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-29" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="sMe0qJWn2xNS24prNS6G-24" value="4. Route Request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-30" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;startArrow=classic;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sMe0qJWn2xNS24prNS6G-25" value="5. Query SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-31" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;strokeColor=#CC0000;fontColor=#CC0000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="sMe0qJWn2xNS24prNS6G-20" value="6. Send Response&lt;br&gt;(HTML/JSON Data Package)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-32" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;html=1;" value="&lt;b&gt;Infrastructure Evolution&lt;/b&gt;&lt;br&gt;On-Premises Legacy vs. AWS Managed Cloud" vertex="1">
+          <mxGeometry height="50" width="820" x="50" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-33" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fcedea;strokeColor=#c0504d;fontStyle=1;startSize=30;align=center;html=1;" value="BEFORE: Legacy On-Premises Datacenter" vertex="1">
+          <mxGeometry height="440" width="340" x="50" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-34" parent="sMe0qJWn2xNS24prNS6G-33" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;html=1;" value="&lt;b&gt;Client Requests&lt;/b&gt;&lt;br&gt;Direct Traffic" vertex="1">
+          <mxGeometry height="60" width="140" x="100" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-35" parent="sMe0qJWn2xNS24prNS6G-33" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;html=1;" value="&lt;b&gt;Single Physical Server&lt;/b&gt;&lt;br&gt;No Redundancy (SPoF)" vertex="1">
+          <mxGeometry height="70" width="180" x="80" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-36" parent="sMe0qJWn2xNS24prNS6G-33" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;html=1;" value="&lt;b&gt;Local Storage&lt;/b&gt;&lt;br&gt;Manual RAID / Backups" vertex="1">
+          <mxGeometry height="80" width="140" x="100" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-37" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#4a90e2;fontStyle=1;startSize=30;align=center;html=1;" value="AFTER: Scalable AWS Cloud Architecture" vertex="1">
+          <mxGeometry height="440" width="360" x="510" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-38" parent="sMe0qJWn2xNS24prNS6G-37" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;html=1;" value="&lt;b&gt;Client Requests&lt;/b&gt;&lt;br&gt;Route 53 DNS" vertex="1">
+          <mxGeometry height="50" width="140" x="110" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-39" parent="sMe0qJWn2xNS24prNS6G-37" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" value="&lt;b&gt;Elastic Load Balancer&lt;/b&gt;&lt;br&gt;ALB (High Availability)" vertex="1">
+          <mxGeometry height="50" width="180" x="90" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-40" parent="sMe0qJWn2xNS24prNS6G-37" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;startSize=24;html=1;fontStyle=1;align=center;" value="Auto-Scaling Group (Multi-AZ)" vertex="1">
+          <mxGeometry height="110" width="300" x="30" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-41" parent="sMe0qJWn2xNS24prNS6G-40" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;html=1;" value="&lt;b&gt;EC2 Instance&lt;/b&gt;&lt;br&gt;AZ-A (Active)" vertex="1">
+          <mxGeometry height="50" width="110" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-42" parent="sMe0qJWn2xNS24prNS6G-40" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;html=1;" value="&lt;b&gt;EC2 Instance&lt;/b&gt;&lt;br&gt;AZ-B (Active)" vertex="1">
+          <mxGeometry height="50" width="110" x="170" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-43" parent="sMe0qJWn2xNS24prNS6G-37" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#b85450;html=1;" value="&lt;b&gt;Amazon RDS Multi-AZ&lt;/b&gt;&lt;br&gt;Automated Replication" vertex="1">
+          <mxGeometry height="80" width="160" x="100" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-44" parent="1" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.3;arrowSize=0.3;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;fontSize=11;html=1;" value="Cloud&lt;br&gt;Migration&lt;br&gt;&amp;amp;&lt;br&gt;Evolution" vertex="1">
+          <mxGeometry height="80" width="80" x="410" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-45" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-34" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#b85450;strokeWidth=2;" target="sMe0qJWn2xNS24prNS6G-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-46" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-35" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#b85450;strokeWidth=2;" target="sMe0qJWn2xNS24prNS6G-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-47" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-38" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90e2;strokeWidth=2;" target="sMe0qJWn2xNS24prNS6G-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-48" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-39" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90e2;strokeWidth=2;" target="sMe0qJWn2xNS24prNS6G-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-49" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-39" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90e2;strokeWidth=2;" target="sMe0qJWn2xNS24prNS6G-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-50" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-41" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90e2;strokeWidth=2;" target="sMe0qJWn2xNS24prNS6G-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-51" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-42" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90e2;strokeWidth=2;" target="sMe0qJWn2xNS24prNS6G-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-52" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" value="Production Grade Strategy: High-Performance Architecture with Security Layers" vertex="1">
+          <mxGeometry height="40" width="1040" x="-90" y="2210" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-53" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" value="Global Client" vertex="1">
+          <mxGeometry height="60" width="60" x="-90" y="2380" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-54" parent="1" style="swimlane;startSize=24;fillColor=#f5f5f5;strokeColor=#666666;html=1;" value="Global Edge Services" vertex="1">
+          <mxGeometry height="180" width="360" x="10" y="2290" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-55" parent="sMe0qJWn2xNS24prNS6G-54" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F8CECC;strokeColor=#B85450;html=1;" value="&lt;b&gt;AWS WAF&lt;/b&gt;&lt;br&gt;(Web Application Firewall - DDOS Protection)" vertex="1">
+          <mxGeometry height="80" width="140" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-56" parent="sMe0qJWn2xNS24prNS6G-54" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;html=1;" value="&lt;b&gt;Amazon CloudFront&lt;/b&gt;&lt;br&gt;(Global CDN Edge Caching)" vertex="1">
+          <mxGeometry height="90" width="150" x="190" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-57" parent="1" style="swimlane;startSize=24;fillColor=#f8cecc;strokeColor=#b85450;html=1;" value="AWS VPC" vertex="1">
+          <mxGeometry height="420" width="540" x="410" y="2290" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-58" parent="sMe0qJWn2xNS24prNS6G-57" style="swimlane;startSize=24;fillColor=#fff2cc;strokeColor=#d6b656;html=1;" value="Public Subnet" vertex="1">
+          <mxGeometry height="360" width="160" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-59" parent="sMe0qJWn2xNS24prNS6G-58" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFE6CC;strokeColor=#D79B00;html=1;" value="Application&lt;br&gt;Load Balancer" vertex="1">
+          <mxGeometry height="60" width="140" x="10" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-60" parent="sMe0qJWn2xNS24prNS6G-57" style="swimlane;startSize=24;fillColor=#e1d5e7;strokeColor=#b85450;html=1;" value="Private Subnet" vertex="1">
+          <mxGeometry height="360" width="320" x="200" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-61" parent="sMe0qJWn2xNS24prNS6G-60" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;html=1;" value="Auto-Scaling EC2 Web Cluster" vertex="1">
+          <mxGeometry height="60" width="280" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-62" parent="sMe0qJWn2xNS24prNS6G-60" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E1D5E7;strokeColor=#B85450;html=1;" value="&lt;b&gt;Primary DB&lt;/b&gt;&lt;br&gt;(Writes Only)" vertex="1">
+          <mxGeometry height="80" width="110" x="20" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-63" parent="sMe0qJWn2xNS24prNS6G-60" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#E1D5E7;strokeColor=#B85450;fontStyle=2;html=1;" value="&lt;b&gt;Read Replica&lt;/b&gt;&lt;br&gt;(Scale Reads)" vertex="1">
+          <mxGeometry height="80" width="110" x="190" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-64" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-53" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="sMe0qJWn2xNS24prNS6G-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-65" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-55" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="sMe0qJWn2xNS24prNS6G-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-66" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-56" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="sMe0qJWn2xNS24prNS6G-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-67" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-59" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="sMe0qJWn2xNS24prNS6G-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-68" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-61" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" target="sMe0qJWn2xNS24prNS6G-62" value="Transaction Writes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-69" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-61" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" target="sMe0qJWn2xNS24prNS6G-63" value="Query Reads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sMe0qJWn2xNS24prNS6G-70" edge="1" parent="1" source="sMe0qJWn2xNS24prNS6G-62" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#0000CC;fontSize=9;" target="sMe0qJWn2xNS24prNS6G-63" value="AWS Async&lt;br&gt;Replication">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
